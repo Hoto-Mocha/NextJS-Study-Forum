@@ -1,5 +1,6 @@
 import { MongoClient } from 'mongodb'
-const url = 'mongodb+srv://admin:1234@cluster0.rn1p7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+import config from '@/apikey'
+const url = config.DBConnectURL
 let connectDB
 
 if (process.env.NODE_ENV === 'development') {
