@@ -42,3 +42,15 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.navbar {
+  padding: 20px;
+  background-color: lightslategray;
+}
+
+.navbar a {
+  margin: 6px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
