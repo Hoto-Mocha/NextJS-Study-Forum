@@ -1,5 +1,6 @@
 import { connectDB } from "@/util/database"
 import { ObjectId } from "mongodb"
+import Link from "next/link"
 
 export default async function Detail(props) {
     const params = await props.params
