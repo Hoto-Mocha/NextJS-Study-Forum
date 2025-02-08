@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
         <div className="navbar">
           <Link href={'/'}>Forum</Link>
           <Link href={'/list'}>📄List</Link>
+          <Link href={'/write'}>✏️Write</Link>
         </div>
         {children}
       </body>
