@@ -50,7 +50,7 @@ a {
   background-color: lightslategray;
 }
 
-.navbar a {
+.navbar a, .navbar span {
   margin: 6px;
   color: white;
   font-weight: bold;
