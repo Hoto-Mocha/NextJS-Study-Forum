@@ -18,25 +18,23 @@ export default function ListItem(props) {
                             <Link href={`/edit/${id}`}>✏️</Link>
                             <span onClick={(e) => {
                                 fetch(`/api/delete?contentId=${id}`, {
-                                    method:'DELETE'
+                                    method: 'DELETE'
                                 })
-                                .then((r)=>{
-                                    if(r.status == 200) {
-                                      return r.json()
-                                    } else {
-                                      //서버가 에러코드전송시 실행할코드
-                                    }
-                                  })
-                                  .then((result)=>{ 
-                                    //성공시 실행할코드
-                                    e.target.parentElement.style.opacity = 0;
-                                    setTimeout(() => {
-                                        e.target.parentElement.style.display = 'none';
-                                    }, 1000)
-                                  }).catch((error)=>{
-                                    //인터넷문제 등으로 실패시 실행할코드
-                                    console.log(error)
-                                  })
+                                    .then((r) => {
+                                        if (r.status == 200) {
+                                            e.target.parentElement.style.opacity = 0;
+                                            setTimeout(() => {
+                                                e.target.parentElement.style.display = 'none';
+                                            }, 1000)
+                                        } else {
+                                            //서버가 에러코드전송시 실행할코드
+                                            console.log(r.json())
+                                        }
+                                    })
+                                    .catch((error) => {
+                                        //인터넷문제 등으로 실패시 실행할코드
+                                        console.log(error)
+                                    })
                             }}>🗑️</span>
                         </div>
                     )
