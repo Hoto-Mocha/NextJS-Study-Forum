@@ -35,7 +35,7 @@ export default async function RootLayout({ children }) {
             session ? 
               <>
                 <LogoutBtn/>
-                <span>반갑습니다, {session.user.name}님.</span> 
+                <span>반갑습니다, {session.user.name}님.</span>
               </>
             : 
               <LoginBtn/>
