@@ -9,6 +9,7 @@ export const authOptions = {
       clientSecret: config.GithubOAuthPW,
     }),
   ],
-  secret : config.JWTPW
+  secret : config.JWTPW,
+  adapter : MongoDBAdapter
 };
 export default NextAuth(authOptions); 
